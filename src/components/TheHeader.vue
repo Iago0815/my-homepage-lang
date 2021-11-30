@@ -20,11 +20,18 @@
          
             <img class="flag-top" src="../img/flags/es.png" v-on:click="selectLanguage('ES')"/>
           
+              <img class="flag-top" src="../img/flags/de.png" v-on:click="selectLanguage('DE')"/>
+
+            
+              
          </li><span class="vertical-bar">&nbsp;|&nbsp;</span>
          
          <li class="nav-item">
           <router-link class="nav-link" active-class="active" :to="{path: '/'+path+'/home'}" data-toggle="collapse" data-target=".navbar-collapse.show">{{home}}<span class="sr-only">(current)</span></router-link>
          </li>
+           <li class="nav-item">
+                <router-link class="nav-link" active-class="active" :to="{path: '/'+path+'/dsign'}" data-toggle="collapse" data-target=".navbar-collapse.show">{{design}}</router-link>
+          </li>
          
          <li class="nav-item">
               <router-link class="nav-link" active-class="active" :to="{path: '/'+path+'/projects'}" data-toggle="collapse" data-target=".navbar-collapse.show">{{projects}}</router-link>
@@ -32,9 +39,7 @@
           <li class="nav-item">
               <router-link class="nav-link" active-class="active" :to="{path: '/'+path+'/blog'}" data-toggle="collapse" data-target=".navbar-collapse.show">{{blog}}</router-link>
           </li>
-          <li class="nav-item">
-                <router-link class="nav-link" active-class="active" :to="{path: '/'+path+'/design'}" data-toggle="collapse" data-target=".navbar-collapse.show">{{design}}</router-link>
-          </li>
+        
             <li class="nav-item">
                 <router-link class="nav-link" active-class="active" :to="{path: '/'+path+'/about'}" data-toggle="collapse" data-target=".navbar-collapse.show">{{about}}</router-link>
             </li>
@@ -107,7 +112,10 @@
                   break;
 
                   case 'ES':  this.$router.push({ path: '/es/home' });
+                  break;
 
+                  case 'DE':  this.$router.push({ path: '/de/home' });
+                  break;
 
                 }
                
@@ -116,7 +124,7 @@
       },
       computed: {
           showLanguage() {
-            return this.$store.state.language;
+            return this.$store.getters.currentLanguage
           }
       }     
 
