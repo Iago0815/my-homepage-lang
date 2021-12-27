@@ -2,8 +2,7 @@
   
    
        <div class="container">
-
-         
+    
           <div class="row"> 
             <div class="col">
               <blockquote>
@@ -18,6 +17,7 @@
          
           </div>
           </div>
+            
 
              <div class="row"> 
             <div class="col">

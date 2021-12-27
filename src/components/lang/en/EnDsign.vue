@@ -3,6 +3,8 @@
    <design
     :pageTitle="title"
     :mapTitle="mapTitle"
+    :mapTitle2="mapTitle2"
+    :mapTitle3="mapTitle3"
     :businessCardV="businessCardV"
     :businessCardR="businessCardR"
    
@@ -24,6 +26,8 @@
 
              title: "Design", 
              mapTitle: "SVG map Coffee Honduras",
+             mapTitle2: "SVG map Agalte coffee region",
+             mapTitle3:  "SVG map El Paraíso + Comayagua coffee region",
              businessCardV: "SVG business card verso",
              businessCardR: "SVG business card recto"
 
